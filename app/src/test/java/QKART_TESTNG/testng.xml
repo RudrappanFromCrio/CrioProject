@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QKart Application Suite">
+  <parameter name = "TC1_User" value = "testUser" />
+  <parameter name = "TC1_Password" value = "abc@123" />
+  <parameter name = "TC2_User" value = "testUser" />
+  <parameter name = "TC2_Password" value = "abc@123" />
+  <parameter name = "TC3_PrductName1" value = "YONEX" />
+  <parameter name = "TC3_PrductName2" value = "Gesundheit" />
+  <parameter name = "TC4_PrductName" value = "Running Shoes" />
+  <parameter name = "TC5_PrductName1" value = "YONEX" />
+  <parameter name = "TC5_PrductName2" value = "Tan" />
+  <parameter name = "TC6_PrductName1" value = "Xtend" />
+  <parameter name = "TC6_PrductName2" value = "Yarine" />
+  <parameter name = "TC7_PrductName1" value = "Stylecon" />
+  <parameter name = "TC7_PrductName2" value = "Xtend" />
+  <parameter name = "TC8_PrductName1" value = "Stylecon" />
+  <parameter name = "TC8_Qty" value = "10" />
+  <parameter name = "TC11_ContactUsUserName" value = "crio user" />
+  <parameter name = "TC11_ContactUsEmail" value = "criouser@gmail.com" />
+  <parameter name = "TC11_ContactUsMessage" value = "Testing the contact us page" />
+  <parameter name = "TC12_ProductName" value = "YONEX Smash Badminton Racquet" />
+
+  <listeners>
+    <listener class-name = "QKART_TESTNG.ListenerClass" />
+  </listeners>  
+
+  <groups>
+      <run>
+        <include name = "sanity" />
+        <include name = "regression" />
+      </run>
+  </groups>
+
+       <test name="QKart Application Tests">
+        <classes>
+           <class name = "QKART_TESTNG.QKART_Tests"/>
+             <!-- <methods>
+               <include name = TestCase06>
+            </methods> -->
+        </classes>
+      </test>
+</suite> 
+      
